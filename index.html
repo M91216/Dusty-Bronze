@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<meta charset="utf-8">
+
+<title>Dusty Fingers App</title>
+
+<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Mobile IE needs ClearType for smoothing fonts -->
+<meta http-equiv="cleartype" content="on">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" />
+<link rel="stylesheet" href="style.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
+</head>
+<style>
+.ui-page {
+   
+    background-color: transparent ;
+    background-position: center;
+    background-size: 700px;
+    background-repeat: no-repeat;
+    
+}
+</style>
+<body>
+
+<!--HomePage-->
+<div data-role="page" id="home"data-position="fixed" data-theme="a">
+ <div data-role="header"data-position="fixed">
+      
+     
+  <h1>Dusty Fingers</h1>
+  <img src="images/dusty.png" style="width:400px;position:center">
+</div>
+  <!--<a href="#home" data-role="button" data-mini="true" data-them="a">back</a>-->
+  <!--<a href="#songs" data-role="button" data-mini="true" data-them="a">Songs</a>-->
+
+ <div data-role="content">
+  <a href="Add.html" data-ajax="false" data-role="button" data-mini="true" data-theme="c">ADD ALBUM</a>
+ 
+  <div data-role="collapsible" data-collapsed="true" data-theme="c" data-content-theme="d">
+      <h4>BROWSE</h4>
+      <ul data-role="listview">
+          <li><a href="#albums">Albums</a></li>
+          <li><a href="#songs">Songs</a></li>
+          <li><a href="#artists">Artists</a></li>
+          <li><a href="#labels">Labels</a></li>
+          <li><a href="#year">Year</a></li>
+      </ul>
+  </div>
+
+ 
+</div>
+
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed"class="ui-btn-active">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+
+<!--Browse-->
+<div data-role="page" id="browse"data-position="fixed">
+ <div data-role="header"data-position="fixed">
+  <h1>Browse</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div>
+ <div data-role="content">
+   <ul data-role="listview" data-filter="true" data-filter-placeholder="SEARCH" data-inset="true">
+       <li><a href="#albums">Albums</a></li>
+       <li><a href="#songs">Songs</a></li>
+       <li><a href="#artists">Artists</a></li>
+       <li><a href="#labels">Labels</a></li>
+       <li><a href="#genre">Genre</a></li>
+       <li><a href="#year">Year</a></li>
+   </ul>
+   
+   
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+<!--News-->
+<div data-role="page" id="news"data-position="fixed">
+ <div data-role="header"data-position="fixed">
+  <h1>Latest</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#songs" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div>
+ <div data-role="content">
+     <ul data-role="listview" data-theme="a">
+         <li data-role="list-divider">Thursday, May 6, 2013 <span class="ui-li-count">1</span></li>
+         <li><a href="index.html">
+             <h2>DAY IN THE LIFE</h2>
+             <p><strong>Wes Montgomery</strong></p>
+             <p>"The Joker"</p>
+             <p class="ui-li-aside"><strong>CTI/A&M, 1967</strong></p>
+         </a></li>
+         <li data-role="list-divider">Saturday, March 6, 2013 <span class="ui-li-count">1</span></li>
+         <li><a href="index.html">
+             <h2>ONE</h2>
+             <p><strong>Bob James</strong></p>
+             <p>"Nautilus"</p>
+             <p class="ui-li-aside"><strong>CTI, 1974</strong></p>
+         </a></li>
+         <li data-role="list-divider">Tuesday, August 22, 2012 <span class="ui-li-count">1</span></li>
+         <li><a href="index.html">
+             <h2>BITCHES BREW</h2>
+             <p><strong>Miles Davis</strong></p>
+             <p>"Spanish Key"</p>
+             <p class="ui-li-aside"><strong>Columbia, 1969</strong></p>
+         </a></li>
+     </ul>
+     
+
+
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news"class="ui-btn-active">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+
+
+<!--About-->
+<div data-role="page" id="about"data-position="fixed"data-theme="a">
+ <div data-role="header"data-position="fixed">
+  <h1>About</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div><br><br><br>
+ <div data-role="content">
+     <p>Album info courtesy of <a href="http://dustygroove.com" data-role="button" data-mini="true" data-them="a">Dusty Groove</a></p>
+     <a href="http://dustygroove.com" data-role="button" data-mini="true" data-them="a">Gold</a>
+     <a href="http://dustygroove.com" data-role="button" data-mini="true" data-them="a">Bronze</a>
+     
+
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about"class="ui-btn-active">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+<!--Albums-->
+<div data-role="page" id="albums"data-position="fixed">
+ <div data-role="header"data-position="fixed">
+  <h1>Albums</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div>
+ <div data-role="content">
+   
+   <ul data-role="listview" data-theme="a">
+       <li><a href="#histoire">
+           <img src="images/histoire.jpg">
+           <h2>HISTOIRE DE MELODY NELSON</h2>
+           <p>Serge Gainsbourg</p></a>
+       </li>
+       <li><a href="#prunes">
+           <img src="images/prunes.jpg">
+           <h2>RELEASE OF AN OATH</h2>
+           <p>Electric Prunes</p></a>
+       </li>
+       <li><a href="#axelrod">
+           <img src="images/axelrod.jpg">
+           <h2>SONGS OF EXPERIENCE</h2>
+           <p>David Axelrod</p></a>
+       </li>
+       <li><a href="#bible">
+           <img src="images/bible.jpg">
+           <h2>SOUL OF THE BIBLE</h2>
+           <p>Cannonball Adderley</p></a>
+       </li>
+       <li><a href="#harp">
+           <img src="images/harp.jpg">
+           <h2>AFRO-HARPING</h2>
+           <p>Dorothy Ashby</p></a>
+       </li>
+   </ul>
+
+
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+<!--Artists-->
+<div data-role="page" id="artists"data-position="fixed">
+ <div data-role="header"data-position="fixed">
+  <h1>Artists</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div>
+ <div data-role="content"data-theme="a">
+     <ul data-role="listview" data-theme="a">
+         <li><a href="#">
+             <img src="images/ashby.png">
+             <h2>DOROTHY ASHBY</h2>
+             <p>harpist</p></a>
+         </li>
+         <li><a href="#">
+             <img src="images/ax.jpg">
+             <h2>DAVID AXELROD</h2>
+             <p>Composer</p></a>
+         </li>
+         <li><a href="#">
+             <img src="images/isaac.jpg">
+             <h2>ISAAC HAYES</h2>
+             <p>composer</p></a>
+         </li>
+         <li><a href="#">
+             <img src="images/miles.jpg">
+             <h2>MILES DAVID</h2>
+             <p>Trumpet</p></a>
+         </li>
+         <li><a href="#">
+             <img src="images/wes.jpg">
+             <h2>WES MONTGOMERY</h2>
+             <p>Guitarist</p></a>
+         </li>
+     </ul>
+     
+
+         </div>
+
+
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+<!--Songs-->
+<div data-role="page" id="songs"data-position="fixed"data-theme="a">
+ <div data-role="header"data-position="fixed">
+  <h1>Songs</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div>
+ <div data-role="content">
+     <ul data-role="listview" data-inset="true" data-divider-theme="d">
+         <li data-role="list-divider">SONG LIBRARY</li>
+         <li><a href="#harp">"Little Sunflower"</a></li>
+         <li><a href="#bible">"Space Spiritual"</a></li>
+         <li><a href="#axelrod">"The Human Abstract"</a></li>
+         <li><a href="#prunes">"Holy Are You"</a></li>
+         <li><a href="#histoire">"Cargo Culte"</a></li>        
+     </ul>
+
+
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+<!--Labels-->
+<div data-role="page" id="labels"data-position="fixed">
+ <div data-role="header"data-position="fixed">
+  <h1>Labels</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div>
+ <div data-role="content">
+
+
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+
+<!--Genre-->
+<div data-role="page" id="genre"data-position="fixed">
+ <div data-role="header"data-position="fixed">
+  <h1>Genre</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div>
+ <div data-role="content">
+
+
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+
+<!--Year-->
+<div data-role="page" id="year"data-position="fixed">
+ <div data-role="header"data-position="fixed">
+  <h1>Year</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div>
+ <div data-role="content">
+
+
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+
+
+<!--Histoire-->
+<div data-role="page" id="histoire"data-position="fixed" data-theme="a">
+ <div data-role="header"data-position="fixed">
+  <h1>Album</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div>
+ <div data-role="content">
+ <ul data-role="listview"data-theme="a" >
+    <li><a href="#">
+        <img src="images/histoire.jpg">
+        <h2>HISTOIRE DE MELODY NELSON</h2>
+        <p>Serge Gainsbourg</p></a>
+    </li>
+ </ul>
+ <div class="text"><p>Fantastic stuff – and a record that may well be the greatest ever from the mighty Serge Gainsbourg – high praise indeed, considering the greatness of Gainsbourg's other music! The album is one long suite built around a spare, electric bass-driven theme – a slow funk riff that's been sampled countless times over the years, and which has gotten the album continuous play on both sides of the Atlantic for many many years. The mighty Jean-Claude Vannier handles the arrangements, and Serge mutters the lyrics over the top, in a raspy loud whisper – while the funky rhythms dart in and out of odd washes of sound, and unusual eerie sounds. There's a very strong soundtrack feel to the album, as waves of music envelop the lyrics – tripped out in funky beats that have become legendary over the years, thanks to some very famous samples! Titles include "En Melody", "Cargo Culte", "Ballade De Melody Nelson", "Valse De Melody", "Ah! Melody", and "L'Hotel Particulier". Wonderful US version too – with a 40 page deluxe booklet that features extensive notes on the album – and a 1971 interview with Gainsbourg!</p>
+    
+ </div>
+
+
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+<!--Prunes-->
+<div data-role="page" id="prunes"data-position="fixed" data-theme="a">
+ <div data-role="header"data-position="fixed">
+  <h1>Album</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div>
+ <div data-role="content">
+ <ul data-role="listview" data-theme="a">
+    <li><a href="#">
+        <img src="images/prunes.jpg">
+        <h2>RELEASE OF AN OATH</h2>
+        <p>Electric Prunes 1968</p></a>
+    </li>
+ </ul>
+ <div class="text"><p>The second album done by David Axelrod for The Electric Prunes – and arguably the best! The album's a bit unusual, in that none of the original Prunes were actually working on the session – and instead, Axlerod's almost fully at the helm – putting together the set in a way that's quite similar to his own solo albums over at Capitol! As with those, there's a bold, spacious sort of instrumentation here – richly orchestral, but also quite funky at times – punctuated by great drums from Earl Palmer, bass from Carol Kaye, keyboards from Don Randi, and guitar from Howard Roberts – who's really tripping out nicely here! The work uses the Jewish Kol Nidre mass as its conceptual locus – but really takes off with plenty of tripped-out Axelrod flourishes that make the whole thing a fair bit more psychedelic than anything you'd ever hear in temple. Titles include "Holy Are You", "The Adoration", "Our Father, Our King", "Kol Nidre", and "General Confessional".</p>
+
+ </div>
+
+
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+
+<!--Axelrod-->
+<div data-role="page" id="axelrod"data-position="fixed" data-theme="a">
+ <div data-role="header"data-position="fixed">
+  <h1>Album</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div>
+ <div data-role="content">
+ <ul data-role="listview" data-theme="a">
+    <li><a href="#">
+        <img src="images/axelrod.jpg">
+        <h2>SONGS OF EXPERIENCE</h2>
+        <p>David Axelrod 1969</p></a>
+    </li>
+ </ul>
+ <div class="text"><p>One of the greatest albums ever by studio genius David Axelrod! The album's one of Axelrod's first on his own – cut for Capitol Records at a time when he was working with some of the label's biggest selling soul acts – like Cannonball Adderley and Lou Rawls – turning their already-successful sounds into super-hit material by adding some nice funky touches, and excellent baroque production. This album lets Axelrod fully explore his talents for larger studio arrangements, and complex yet soulful instrumentation. The record is subtitled "an anthology of awareness after birth, based on the 18th century poems of William Blake" – and it features incredible arrangements conducted by Don Randi, played by a host of excellent LA jazz and studio players. The overall sound is spacey and dark, with nice touches of funk, and plenty of cool instrumental passages that have been sampled over the years by hip hoppers and other producers. Titles include "London", "The Fly", "The Human Abstract", "A Divine Image", and "The Sick Rose". Reissued with the original gatefold cover, and everything!</p>
+
+ </div>
+
+
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+
+<!--Bible-->
+<div data-role="page" id="bible"data-position="fixed" data-theme="a">
+ <div data-role="header"data-position="fixed">
+  <h1>Album</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div>
+ <div data-role="content">
+ <ul data-role="listview"data-theme="a" >
+    <li><a href="#">
+        <img src="images/bible.jpg">
+        <h2>SOUL OF THE BIBLE</h2>
+        <p>Cannonball Adderley 1972</p></a>
+    </li>
+ </ul>
+ <div class="text"><p>Prime material from Cannonball and David Axelrod – and despite the biblical leanings of the title, the record is pretty darn funky! As they did for the Zodiac, Cannonball and Axelrod take a trip through a host of cultural milestones – stopping along the way to turn each one into a new pillar of soul, working with Rick Holmes, who narrates the set in the same way he did on the Zodiac albums. Brother Nat Adderley and George Duke are among the players in the album's very funky backing – and tracks include "Make Your Own Temple", "Amani", "Space Spiritual", "Eternal Walk", and "Gone". Oh for the days of the double LP concept jazz record!</p>
+
+ </div>
+
+
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+
+<!--Harp-->
+<div data-role="page" id="harp"data-position="fixed" data-theme="a">
+ <div data-role="header"data-position="fixed">
+  <h1>Album</h1>
+  <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
+  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+</div>
+ <div data-role="content">
+ <ul data-role="listview" data-theme="a">
+    <li><a href="#">
+        <img src="images/harp.jpg">
+        <h2>AFRO-HARPING</h2>
+        <p>Dorothy Ashby 1969</p></a>
+    </li>
+ </ul>
+ <div class="text"><p>One of the grooviest records ever – a sublime blend of African percussion, soulful orchestrations, and Dorothy Ashby's amazing electric harp! By the time of this landmark album, Dorothy had been knocking around the jazz world for a number of years, but it wasn't until she hooked up with Richard Evans at Cadet Records that her sound really began to cook – breaking down genres and expectations in the trademark style of the best late 60s sides from the Chicago underground. The record's got a bit of funk, a bit of jazz, and a heck of a lot of soul – and the setting works perfectly for Dorothy's harp, giving it a lot more room to work around than some of her smaller jazz combo albums. The album includes two great originals – "Soul Vibrations" and "Afro-Harping" – both of which have a nice funky edge, and a groovy soulful bounce – and other tunes include "Lonely Girl", "Life Has Its Trials", "Look Of Love", "Come Live With Me", and a great version of Freddie Hubbard's "Little Sunflower".</p>
+
+ </div>
+
+
+
+</div>
+  <div data-role="footer"data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+          <li><a href="#home" data-position="fixed">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+  </div>
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="js/libs/jquery.validate.min.js" type="text/javascript"></script>
+<script src="js/Main.js" type="text/javascript"></script>
+<script src="js/json.js" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>
