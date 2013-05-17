@@ -323,7 +323,7 @@ var json = {
 
 
      },
-     "sessionInfo2": {
+     "sessionInfo17": {
      	"optgroup":  ["Sampling:", "intro"],
      	"uname":     ["User:", "Mark Gonzales"],
      	"email":     ["Email:", "markgonzales@gmail.com"],
@@ -343,7 +343,7 @@ var json = {
       
       
      },
-     "sessionInfo2": {
+     "sessionInfo18": {
      	"optgroup":  ["Sampling:", "intro"],
      	"uname":     ["User:", "Mark Gonzales"],
      	"email":     ["Email:", "markgonzales@gmail.com"],
@@ -363,7 +363,7 @@ var json = {
      
      
      },
-     "sessionInfo2": {
+     "sessionInfo19": {
      	"optgroup":  ["Sampling:", "intro"],
      	"uname":     ["User:", "Mark Gonzales"],
      	"email":     ["Email:", "markgonzales@gmail.com"],
@@ -382,7 +382,7 @@ var json = {
 
 
      },
-     "sessionInfo2": {
+     "sessionInfo20": {
      	"optgroup":  ["Sampling:", "intro"],
      	"uname":     ["User:", "Mark Gonzales"],
      	"email":     ["Email:", "markgonzales@gmail.com"],
