@@ -10,26 +10,10 @@ window.addEventListener("DOMContentLoaded", function(){
     //getElementById Function
     function ge(getElement) {
         var theElement = document.getElementById(getElement);
-        return theElement
+        return theElement;
     }
     
-    //Create select field element and populate with options.
-    function makeOpt(){
-	    var formTag = document.getElementsByTagName("form"), //formTag is an array of all the form tags.
-	        selectLi = ge("select"),
-	        makeSelect = document.createElement("select");
-	        makeSelect.setAttribute("id", "optgroup");
-	    for(var i=0, j=sampleGroups.length; i<j; i++){
-		    var makeOption = document.createElement("option");
-		    var opText = sampleGroups[i];
-		    makeOption.setAttribute("value", opText);
-		    makeOption.innerHTML = opText;
-		    makeSelect.appendChild(makeOption);
-	    }
-	    selectLi.appendChild(makeSelect);
-    }
-    
-    //Find value of selected radio button
+        //Find value of selected radio button
     function getSelectedRadio(){
 	    var radios = document.forms[0].release;
 	    for(var i=0; i<radios.length; i++){
@@ -250,12 +234,62 @@ window.addEventListener("DOMContentLoaded", function(){
 		}    
     }
     
-   //Variable defaults
+    
+    function validate(e){
+    	//Define the element we want to check
+    	var getSamples  = ge("optgroup");
+    	var getUser = ge("uname");
+    	var getEmail    = ge("email");
+    	
+    	//Reset Error Messages
+    	errMsg.innerHTML ="";
+    	   getSamples.style.border  = "1px solid black";
+    	   getUser.style.border = "1px solid black";
+    	   getEmail.style.border    = "1px solid black";
+    	//Get Error Message
+    	var messageAry = [];
+    	//formats validation
+    	if(getSamples.value === "--Choose Sample Section--"){
+    		var samplesError = "Please choose a sampled section.";
+    		getSamples.style.border = "1px solid red";
+    		messageAry.push(samplesError);
+    	}
+    	//Customer name validation
+    	if(getUser.value === ""){
+    		var userError = "Please enter a name.";
+    		getUser.style.border = "1px solid red";
+    		messageAry.push(userError);
+    	}
+    	//Email validation
+    	var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    	if (!(re.exec(getEmail.value))){
+    		var emailError = "Please enter a valid email address";
+    		getEmail.style.border = "1px solid red";
+    		messageAry.push(emailError);
+    	}
+    	//if there were errors,display them on the screen.
+    	if(messageAry.length >= 1){
+    		for(var i=0, j=messageAry.length; i < j; i++){
+    			var txt = document.createElement("li");
+    			txt.innerHTML = messageAry[i];
+    			errMsg.appendChild(txt);               
+    		}
+    		e.preventDefault();
+    		return false;
+    	}else{
+    		//If all is OK, save our data! send the key value (which came from the editData function).
+    		//Remember this key alue was passed through the editSubmit event listener as a property.
+    		storeData(this.key);
+    	}       
+    }
+    
+       //Variable defaults
    var sampleGroups = ["--Choose Sample Section--", "Intro", "Verse", "Chorus", "Bridge"],
        releaseValue,
-       importValue = "No"
-   ;
-   makeOpt();
+       importValue = "No",
+       errMsg = ge("errors");
+   
+   
 
    //Set Link $submit Click Events
    var displayLink =ge("displayLink");
