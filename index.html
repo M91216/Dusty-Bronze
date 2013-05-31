@@ -14,31 +14,28 @@
 <!-- Mobile IE needs ClearType for smoothing fonts -->
 <meta http-equiv="cleartype" content="on">
 
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" />
+<link rel="stylesheet" href="themes/crates.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" />
 <link rel="stylesheet" href="style.css" />
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
 </head>
 <style>
 .ui-page {
-   
+    background-image: url('images/crates.jpg');
     background-color: transparent ;
     background-position: center;
-    background-size: 700px;
+    background-size: 500px;
     background-repeat: no-repeat;
-    
-}
+    }
 </style>
 <body>
 
 <!--HomePage-->
 <div data-role="page" id="home"data-position="fixed" data-theme="a">
- <div data-role="header"data-position="fixed">
-      
-     
+ <div data-role="header"data-position="fixed">    
   <h1>Dusty Fingers</h1>
-  <img src="images/dusty.png" style="width:400px;position:center">
-</div>
+</div><br><br><br>
   <!--<a href="#home" data-role="button" data-mini="true" data-them="a">back</a>-->
   <!--<a href="#songs" data-role="button" data-mini="true" data-them="a">Songs</a>-->
 
@@ -47,7 +44,7 @@
  
   <div data-role="collapsible" data-collapsed="true" data-theme="c" data-content-theme="d">
       <h4>BROWSE</h4>
-      <ul data-role="listview">
+      <ul data-role="listview" data-theme"a">
           <li><a href="#albums">Albums</a></li>
           <li><a href="#songs">Songs</a></li>
           <li><a href="#artists">Artists</a></li>
@@ -76,7 +73,7 @@
  <div data-role="header"data-position="fixed">
   <h1>Browse</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+  
 </div>
  <div data-role="content">
    <ul data-role="listview" data-filter="true" data-filter-placeholder="SEARCH" data-inset="true">
@@ -105,9 +102,10 @@
 <!--News-->
 <div data-role="page" id="news"data-position="fixed">
  <div data-role="header"data-position="fixed">
+ <img border="0" src="images/Svinyl.png"style="float:right;display:inline;width:40px;height:40px;"/>
   <h1>Latest</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#songs" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+ 
 </div>
  <div data-role="content">
      <ul data-role="listview" data-theme="a">
@@ -154,14 +152,15 @@
 <!--About-->
 <div data-role="page" id="about"data-position="fixed"data-theme="a">
  <div data-role="header"data-position="fixed">
+ <img border="0" src="images/Svinyl.png"style="float:right;display:inline;width:40px;height:40px;"/>
   <h1>About</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+  
 </div><br><br><br>
  <div data-role="content">
      <p>Album info courtesy of <a href="http://dustygroove.com" data-role="button" data-mini="true" data-them="a">Dusty Groove</a></p>
-     <a href="http://dustygroove.com" data-role="button" data-mini="true" data-them="a">Gold</a>
-     <a href="http://dustygroove.com" data-role="button" data-mini="true" data-them="a">Bronze</a>
+     <a href="http://m91216.github.io/Dusty-Gold" data-role="button" data-mini="true" data-them="a">Gold</a>
+     <a href="http://m91216.github.io/Dusty-Bronze" data-role="button" data-mini="true" data-them="a">Bronze</a>
      
 
 
@@ -180,9 +179,10 @@
 <!--Albums-->
 <div data-role="page" id="albums"data-position="fixed">
  <div data-role="header"data-position="fixed">
+ <img border="0" src="images/Svinyl.png"style="float:right;display:inline;width:40px;height:40px;"/>
   <h1>Albums</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+  
 </div>
  <div data-role="content">
    
@@ -231,9 +231,10 @@
 <!--Artists-->
 <div data-role="page" id="artists"data-position="fixed">
  <div data-role="header"data-position="fixed">
+ <img border="0" src="images/Svinyl.png"style="float:right;display:inline;width:40px;height:40px;"/>
   <h1>Artists</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+ 
 </div>
  <div data-role="content"data-theme="a">
      <ul data-role="listview" data-theme="a">
@@ -284,9 +285,10 @@
 <!--Songs-->
 <div data-role="page" id="songs"data-position="fixed"data-theme="a">
  <div data-role="header"data-position="fixed">
+ <img border="0" src="images/Svinyl.png"style="float:right;display:inline;width:40px;height:40px;"/>
   <h1>Songs</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+  
 </div>
  <div data-role="content">
      <ul data-role="listview" data-inset="true" data-divider-theme="d">
@@ -315,9 +317,10 @@
 <!--Labels-->
 <div data-role="page" id="labels"data-position="fixed">
  <div data-role="header"data-position="fixed">
+ <img border="0" src="images/Svinyl.png"style="float:right;display:inline;width:40px;height:40px;"/>
   <h1>Labels</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+ 
 </div>
  <div data-role="content">
 
@@ -339,9 +342,10 @@
 <!--Genre-->
 <div data-role="page" id="genre"data-position="fixed">
  <div data-role="header"data-position="fixed">
+ <img border="0" src="images/Svinyl.png"style="float:right;display:inline;width:40px;height:40px;"/>
   <h1>Genre</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+  
 </div>
  <div data-role="content">
 
@@ -363,9 +367,10 @@
 <!--Year-->
 <div data-role="page" id="year"data-position="fixed">
  <div data-role="header"data-position="fixed">
+ <img border="0" src="images/Svinyl.png"style="float:right;display:inline;width:40px;height:40px;"/>
   <h1>Year</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+  
 </div>
  <div data-role="content">
 
@@ -388,9 +393,10 @@
 <!--Histoire-->
 <div data-role="page" id="histoire"data-position="fixed" data-theme="a">
  <div data-role="header"data-position="fixed">
+ <img border="0" src="images/Svinyl.png"style="float:right;display:inline;width:40px;height:40px;"/>
   <h1>Album</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+  
 </div>
  <div data-role="content">
  <ul data-role="listview"data-theme="a" >
@@ -421,9 +427,10 @@
 <!--Prunes-->
 <div data-role="page" id="prunes"data-position="fixed" data-theme="a">
  <div data-role="header"data-position="fixed">
+ <img border="0" src="images/Svinyl.png"style="float:right;display:inline;width:40px;height:40px;"/>
   <h1>Album</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+  
 </div>
  <div data-role="content">
  <ul data-role="listview" data-theme="a">
@@ -455,9 +462,10 @@
 <!--Axelrod-->
 <div data-role="page" id="axelrod"data-position="fixed" data-theme="a">
  <div data-role="header"data-position="fixed">
+ <img border="0" src="images/Svinyl.png"style="float:right;display:inline;width:40px;height:40px;"/>
   <h1>Album</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+ 
 </div>
  <div data-role="content">
  <ul data-role="listview" data-theme="a">
@@ -489,9 +497,10 @@
 <!--Bible-->
 <div data-role="page" id="bible"data-position="fixed" data-theme="a">
  <div data-role="header"data-position="fixed">
+ <img border="0" src="images/Svinyl.png"style="float:right;display:inline;width:40px;height:40px;"/>
   <h1>Album</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+ 
 </div>
  <div data-role="content">
  <ul data-role="listview"data-theme="a" >
@@ -523,9 +532,10 @@
 <!--Harp-->
 <div data-role="page" id="harp"data-position="fixed" data-theme="a">
  <div data-role="header"data-position="fixed">
+ <img border="0" src="images/Svinyl.png"style="float:right;display:inline;width:40px;height:40px;"/>
   <h1>Album</h1>
   <a href="#home" data-role="button" data-mini="true" data-them="a">BACK</a>
-  <a href="#" data-role="button" data-mini="true" data-them="a">Dusty Fingers</a>
+  
 </div>
  <div data-role="content">
  <ul data-role="listview" data-theme="a">
@@ -561,10 +571,10 @@
 
 
 
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
 <script src="js/libs/jquery.validate.min.js" type="text/javascript"></script>
-<script src="js/Main.js" type="text/javascript"></script>
 <script src="js/json.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
 
 
 
